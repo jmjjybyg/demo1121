@@ -1,11 +1,13 @@
 import streamlit as st
 
+# Title
 st.title("Business Dashboard with Streamlit Layouts")
 
-# Markdown
+# Objective(Markdown)
 msg = "Objective: To demonstrate the usage of columns, tabs, and dynamic containers in a business dashboard."
 st.write(msg)
 
+# Columns Layout
 col1, col2 = st.columns(2)
 
 with col1:
@@ -34,8 +36,8 @@ with tab2:
         "Very satisfied with the product quality.",
         "Quick delivery and excellent support."
     ]
-    for feedback in customer_feedback:
-        st.write(f"- {feedback}")
+    for idx, feedback in enumerate(customer_feedback, 1):
+        st.write(f" {idx}. {feedback}")
 with tab3:
     st.write("Content for Market Trends")
     market_trends = {
